@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img class="img" src="../static/images/logo.png" style="height: 60px; width: auto; border: 2px solid white; border-radius: 50%;" alt="">
+        <h2 class="logo"><a href="#">LOGO</a> </h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="/service"><i class="fas fa-cogs"></i>Services</a></li>
+          <li><a href="/portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+          <li><a href="/about"><i class="fas fa-user"></i>About Us</a></li>
+          <li><a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+      <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>Explore our wide range of camping gear services.</p>
+        <div class="cards">
+          <div class="card" data-aos="fade-up">
+           <center> <img src="../static/images/12.jpg" alt="img"></center>
+            <h3>Tents</h3>
+            <p>Experience comfort and protection with our high-quality camping tents.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <center><img src="../static/images/5.jpg" alt="img"></center>
+            <h3>Sleeping Bags</h3>
+            <p>Stay cozy and warm during your camping trips with our premium sleeping bags.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+           <center> <img src="../static/images/6.jpg" alt="img"></center>
+            <h3>Camp Stoves</h3>
+            <p>Cook delicious meals in the great outdoors with our reliable camp stoves.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <center><img src="../static/images/13.jpg" alt="img"></center>
+            <h3>Backpacks</h3>
+            <p>Carry your essentials comfortably with our durable and functional camping backpacks.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="400">
+           <center> <img src="../static/images/4.jpg" alt="img"></center>
+            <h3>Camp Chairs</h3>
+            <p>Relax and unwind in style with our comfortable and portable camping chairs.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <center><img src="../static/images/8.jpg" alt="img"></center>
+            <h3>Camp Lights</h3>
+            <p>Illuminate your campsite with our reliable and energy-efficient camping lights.</p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="copyright"><center>Copyright © 2024 All Rights Reserved</center></div>
+    
+          </div>
+          <div class="footer-right">
+            <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+            <a href="#portfolio">Portfolio</a>
+          </div>
+          <div class="social-media">
+            <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        </div>
+        <div class="contact-form">
+          <h4 class="contacthead">Quick Contact</h4>
+          <div class="subscribe_form">
+            <form id="subscribe-form">
+              <input type="email" id="email" placeholder="Your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+          <div id="message-box" class="message-box"></div>
+        </div>
+        </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const form = document.getElementById('subscribe-form');
+          
+          form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+      
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+      
+            if (validateEmail(email)) {
+              // Show success alert
+              alert('Thank you for subscribing! We will send updates to ' + email);
+              emailInput.value = ''; // Clear the input field
+            } else {
+              // Show error alert
+              alert('Please enter a valid email address.');
+            }
+          });
+      
+          function validateEmail(email) {
+            // Basic email validation
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+          }
+        });
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
+  </script>
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My project</title>
+        <link rel="stylesheet" href="../static/styles.css">
+        <!-- Fontawesome Link for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <style>
+          .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: calc(33% - 40px); /* Adjust for responsiveness */
+    margin: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.5);
+  }
+        </style>
+      </head>
+     
+<body>
+  <header>
+    <nav class="navbar">
+      <img class="img" src="../static/images/logo.png" style="height: 60px; width: auto; border: 2px solid white; border-radius: 50%;" alt="">
+      <h2 class="logo"><a href="#">LOGO</a> </h2>
+      <input type="checkbox" id="menu-toggler">
+      <label for="menu-toggler" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </label>
+      <ul class="all-links">
+        <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="/service"><i class="fas fa-cogs"></i>Services</a></li>
+        <li><a href="/portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+        <li><a href="/about"><i class="fas fa-user"></i>About Us</a></li>
+        <li><a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+      <section class="portfolio" id="portfolio">
+        <h2 style="margin-top:35px ;" data-aos="fade-up">Our Portfolio</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Take a look at some of our memorable camping adventures.</p>
+        <div class="cards">
+          <div  class="card" data-aos="fade-up" data-aos-delay="200">
+            <img class="cardimg" src="../static/images/3.jpg" alt="Mountain Hiking">
+            <h3>Mountain Hiking</h3>
+            <p>Embark on an exhilarating hiking adventure in the breathtaking mountain ranges.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <img src="../static/images/2.jpg" alt="Lakeside Camping">
+            <h3>Lakeside Camping</h3>
+            <p>Enjoy a tranquil camping experience by the serene shores of picturesque lakes.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <img src="../static/images/1.jpg" alt="Beach Camping">
+            <h3>Beach Camping</h3>
+            <p>Escape to sandy beaches and camp under the starry sky by the crashing waves.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <img src="../static/images/11.jpg" alt="Forest Exploration">
+            <h3>Forest Exploration</h3>
+            <p>Discover the wonders of lush forests and immerse yourself in nature's beauty.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <img src="../static/images/10.jpg" alt="RV Camping">
+            <h3>RV Camping</h3>
+            <p>Experience the freedom of road trips and camping adventures with our RV rentals.</p>
+          </div>
+          <li class="card" data-aos="fade-up" data-aos-delay="700">
+            <img src="../static/images/14.jpg" alt="Desert Camping">
+            <h3>Desert Camping</h3>
+            <p>Embark on a unique desert camping experience and witness stunning landscapes.</p>
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="copyright"><center>Copyright © 2024 All Rights Reserved</center></div>
+    
+          </div>
+          <div class="footer-right">
+            <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+            <a href="#portfolio">Portfolio</a>
+          </div>
+          <div class="social-media">
+            <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        </div>
+        <div class="contact-form">
+          <h4 class="contacthead">Quick Contact</h4>
+          <div class="subscribe_form">
+            <form id="subscribe-form">
+              <input type="email" id="email" placeholder="Your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+          <div id="message-box" class="message-box"></div>
+        </div>
+        </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const form = document.getElementById('subscribe-form');
+          
+          form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+      
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+      
+            if (validateEmail(email)) {
+              // Show success alert
+              alert('Thank you for subscribing! We will send updates to ' + email);
+              emailInput.value = ''; // Clear the input field
+            } else {
+              // Show error alert
+              alert('Please enter a valid email address.');
+            }
+          });
+      
+          function validateEmail(email) {
+            // Basic email validation
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+          }
+        });
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          AOS.init();
+        });
+      </script>
+      </script>
+</body>
+</html>

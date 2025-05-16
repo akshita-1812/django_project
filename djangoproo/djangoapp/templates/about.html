@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My project</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <!-- Fontawesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <img class="img" src="../static/images/logo.png"
+        style="height: 60px; width: auto; border: 2px solid white; border-radius: 50%;" alt="">
+      <h2 class="logo"><a href="#">LOGO</a> </h2>
+      <input type="checkbox" id="menu-toggler">
+      <label for="menu-toggler" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </label>
+      <ul class="all-links">
+        <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="/service"><i class="fas fa-cogs"></i>Services</a></li>
+        <li><a href="/portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+        <li><a href="/about"><i class="fas fa-user"></i>About Us</a></li>
+        <li><a href="/contact"><i class="fas fa-envelope"></i>Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="about1" id="about">
+    <h2 data-aos="fade-up">About Us</h2><i class="fas fa-bullseye"></i>
+
+    <p data-aos="fade-up" class="intro1">Discover our story and what makes us passionate about providing top-notch
+      camping services.</p>
+
+
+
+    <div data-aos="fade-up" class="row1 company-info1">
+      <div class="text1">
+        <h3>Our Story</h3>
+        <p>Experience the excellence of our camping gear and services. For over a decade, we've been offering
+          high-quality camping essentials and gear for outdoor enthusiasts. Our commitment to quality and customer
+          satisfaction ensures that every adventurer can rely on us for their camping needs.</p>
+      </div>
+      <div class="image1">
+        <img src="../static/images/aboutimg.jpeg" alt="Our Story">
+      </div>
+    </div>
+
+    <div data-aos="fade-up" class="row1 mission-vision1">
+      <div class="text1">
+        <h3>Our Mission</h3>
+        <p>At Camping Gear Experts, our mission is to equip outdoor enthusiasts with top-notch camping gear and
+          essentials that enhance their outdoor experiences. We strive to provide reliable, durable, and innovative
+          products that contribute to memorable adventures and lasting memories.</p>
+      </div>
+      <div class="image1">
+        <img src="../static/images/img2.jpeg" alt="Our Mission">
+      </div>
+    </div>
+    <div data-aos="fade-up" class="row1 mission-vision1">
+      <div class="text1">
+        <h3>Our Vision</h3>
+        <p>Our vision is to become the go-to destination for camping enthusiasts, known for our extensive selection of
+          premium camping gear and exceptional customer service. We aspire to inspire and enable people to embrace the
+          beauty of nature and create unforgettable camping experiences.</p>
+      </div>
+      <div class="image1">
+        <img src="../static/images/img3.jpeg" alt="Our Vision">
+      </div>
+    </div>
+
+    <div data-aos="fade-up" class="team2">
+      <h3>Meet Our Team</h3>
+      <div class="team1">
+        <div data-aos="fade-up" class="team-member1">
+          <center><img src="../static/images/user1.jpeg" alt="John Doe"></center>
+          <div class="member-info1">
+            <h4>John Doe</h4>
+            <p>Founder and CEO</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="team-member1">
+          <center> <img src="../static/images/user4.jpeg" alt="Jane Smith"></center>
+          <div class="member-info1">
+            <h4>Jane Smith</h4>
+            <p>Gear Specialist</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="team-member1">
+          <center> <img src="../static/images/user3.jpeg" alt="Mark Johnson"></center>
+          <div class="member-info1">
+            <h4>Mark Johnson</h4>
+            <p>Customer Representative</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="team-member1">
+          <center><img src="../static/images/user2.jpeg" alt="Sarah Brown"></center>
+          <div class="member-info1">
+            <h4>Sarah Brown</h4>
+            <p>Operations Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright"><center>Copyright © 2024 All Rights Reserved</center></div>
+
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Us</a>
+        <a href="#portfolio">Portfolio</a>
+      </div>
+      <div class="social-media">
+        <a href="#" aria-label="Facebook" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    </div>
+    <div class="contact-form">
+      <h4 class="contacthead">Quick Contact</h4>
+      <div class="subscribe_form">
+        <form id="subscribe-form">
+          <input type="email" id="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div id="message-box" class="message-box"></div>
+    </div>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('subscribe-form');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+  
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value.trim();
+  
+        if (validateEmail(email)) {
+          // Show success alert
+          alert('Thank you for subscribing! We will send updates to ' + email);
+          emailInput.value = ''; // Clear the input field
+        } else {
+          // Show error alert
+          alert('Please enter a valid email address.');
+        }
+      });
+  
+      function validateEmail(email) {
+        // Basic email validation
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+    });
+  </script>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init();
+    });
+  </script>
+  </script>
+</body>
+
+</html>
